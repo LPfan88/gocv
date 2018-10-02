@@ -15,7 +15,26 @@ The GoCV package supports the latest releases of Go and OpenCV (v3.4.2) on Linux
 
 GoCV also supports [Intel OpenVINO](https://software.intel.com/en-us/openvino-toolkit). Check out the [OpenVINO README](./openvino/README.md) for more info on how to use GoCV with the Intel OpenVINO toolkit.
 
+**The difference from the [hybridgroup/gocv](https://github.com/hybridgroup/gocv): supports image resizing with CUDA(GPU).**
 ## How to use
+
+### Image resize with CUDA
+```go
+package main
+
+import (
+    "image"
+    
+    "github.com/LPfan88/gocv"
+)
+
+func main() {
+    img := gocv.IMRead("test.jpg", gocv.IMReadUnchanged)
+    // Resize to 100x100
+    gocv.GpuResize(img, &img, image.Point{X: 100, Y: 100}, 0, 0, gocv.InterpolationArea)
+    gocv.IMWrite("test_resized.jpg", img)
+}
+```
 
 ### Hello, video
 

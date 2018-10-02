@@ -732,6 +732,27 @@ func TestResize(t *testing.T) {
 	}
 }
 
+func TestGpuResize(t *testing.T) {
+	src := IMRead("images/gocvlogo.jpg", IMReadColor)
+	if src.Empty() {
+		t.Error("Invalid read of Mat in Resize test")
+	}
+	defer src.Close()
+
+	dst := NewMat()
+	defer dst.Close()
+
+	GpuResize(src, &dst, image.Point{}, 0.5, 0.5, InterpolationDefault)
+	if dst.Cols() != 200 || dst.Rows() != 172 {
+		t.Errorf("Expected dst size of 200x172 got %dx%d", dst.Cols(), dst.Rows())
+	}
+
+	GpuResize(src, &dst, image.Pt(440, 377), 0, 0, InterpolationCubic)
+	if dst.Cols() != 440 || dst.Rows() != 377 {
+		t.Errorf("Expected dst size of 440x377 got %dx%d", dst.Cols(), dst.Rows())
+	}
+}
+
 func TestGetRotationMatrix2D(t *testing.T) {
 	type args struct {
 		center image.Point

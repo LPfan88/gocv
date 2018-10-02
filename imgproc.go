@@ -1049,6 +1049,25 @@ func Resize(src Mat, dst *Mat, sz image.Point, fx, fy float64, interp Interpolat
 	return
 }
 
+// Resize resizes an image using CUDA.
+// It resizes the image src down to or up to the specified size, storing the
+// result in dst. Note that src and dst may be the same image. If you wish to
+// scale by factor, an empty sz may be passed and non-zero fx and fy. Likewise,
+// if you wish to scale to an explicit size, a non-empty sz may be passed with
+// zero for both fx and fy.
+//
+// For further details, please see:
+// https://docs.opencv.org/master/db/d29/group__cudawarping.html#ga4f5fa0770d1c9efbadb9be1b92a6452a
+func GpuResize(src Mat, dst *Mat, sz image.Point, fx, fy float64, interp InterpolationFlags) {
+	pSize := C.struct_Size{
+		width:  C.int(sz.X),
+		height: C.int(sz.Y),
+	}
+
+	C.GpuResize(src.p, dst.p, pSize, C.double(fx), C.double(fy), C.int(interp))
+	return
+}
+
 // GetRotationMatrix2D calculates an affine matrix of 2D rotation.
 //
 // For further details, please see:

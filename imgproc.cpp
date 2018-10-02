@@ -364,6 +364,18 @@ void Resize(Mat src, Mat dst, Size dsize, double fx, double fy, int interp) {
     cv::resize(*src, *dst, sz, fx, fy, interp);
 }
 
+void GpuResize(Mat src, Mat dst, Size dsize, double fx, double fy, int interp) {
+    cv::Size sz(dsize.width, dsize.height);
+    cv::cuda::GpuMat gpuSrc(*src);
+    cv::cuda::GpuMat gpuDst(*dst);
+
+    cv::cuda::resize(gpuSrc, gpuDst, sz, fx, fy, interp);
+
+    gpuDst.download(*dst);
+    gpuDst.release();
+    gpuSrc.release();
+}
+
 Mat GetRotationMatrix2D(Point center, double angle, double scale) {
     cv::Point pt(center.x, center.y);
     return new  cv::Mat(cv::getRotationMatrix2D(pt, angle, scale));
