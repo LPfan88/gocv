@@ -81,7 +81,7 @@ This section provides a short description of one of many possible workflows you 
 Assuming you have already forked the `gocv` repo, you need to add a new `git remote` which will point to your GitHub fork. Notice below that you **must** `cd` to `gocv` repo directory before you add the new `git remote`:
 
 ```shell
-cd $GOPATH/src/gocv.io/x/gocv
+cd $GOPATH/src/github.com/LPfan88/gocv
 git remote add gocv-fork https://github.com/YOUR_GH_HANDLE/gocv.git
 ```
 

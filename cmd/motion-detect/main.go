@@ -20,7 +20,7 @@ import (
 	"image/color"
 	"os"
 
-	"gocv.io/x/gocv"
+	"github.com/LPfan88/gocv"
 )
 
 const MinimumArea = 3000

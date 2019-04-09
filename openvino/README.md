@@ -5,7 +5,7 @@ The [Intel OpenVINO toolkit](https://software.intel.com/en-us/openvino-toolkit) 
 GoCV supports using the Intel OpenVINO Inference Engine as a backend for the OpenCV deep neural network (DNN) module. For details, please see:
 https://github.com/hybridgroup/gocv/blob/master/openvino/ie/README.md
 
-GoCV also supports the Intel OpenVINO Photography Vision Library (PVL) which can be found in the "gocv.io/x/gocv/openvino/pvl" package. For details, please see:
+GoCV also supports the Intel OpenVINO Photography Vision Library (PVL) which can be found in the "github.com/LPfan88/gocv/openvino/pvl" package. For details, please see:
 https://github.com/hybridgroup/gocv/blob/master/openvino/pvl/README.md
 
 ## Installing Intel OpenVINO toolkit

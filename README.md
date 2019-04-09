@@ -2,7 +2,7 @@
 
 [![GoCV](https://raw.githubusercontent.com/hybridgroup/gocv/master/images/gocvlogo.jpg)](http://gocv.io/)
 
-[![GoDoc](https://godoc.org/gocv.io/x/gocv?status.svg)](https://godoc.org/github.com/hybridgroup/gocv)
+[![GoDoc](https://godoc.org/github.com/LPfan88/gocv?status.svg)](https://godoc.org/github.com/hybridgroup/gocv)
 [![Travis Build Status](https://travis-ci.org/hybridgroup/gocv.svg?branch=dev)](https://travis-ci.org/hybridgroup/gocv)
 [![AppVeyor Build status](https://ci.appveyor.com/api/projects/status/9asd5foet54ru69q/branch/dev?svg=true)](https://ci.appveyor.com/project/deadprogram/gocv/branch/dev)
 [![codecov](https://codecov.io/gh/hybridgroup/gocv/branch/dev/graph/badge.svg)](https://codecov.io/gh/hybridgroup/gocv)
@@ -44,7 +44,7 @@ This example opens a video capture device using device "0", reads frames, and sh
 package main
 
 import (
-	"gocv.io/x/gocv"
+	"github.com/LPfan88/gocv"
 )
 
 func main() {
@@ -73,7 +73,7 @@ import (
 	"fmt"
 	"image/color"
 
-	"gocv.io/x/gocv"
+	"github.com/LPfan88/gocv"
 )
 
 func main() {
@@ -143,7 +143,7 @@ There are examples in the [cmd directory](./cmd) of this repo in the form of var
 To install GoCV, run the following command:
 
 ```
-go get -u -d gocv.io/x/gocv
+go get -u -d github.com/LPfan88/gocv
 ```
 
 To run code that uses the GoCV package, you must also install OpenCV 3.4.2 on your system. Here are instructions for Ubuntu, Raspian, macOS, and Windows.
@@ -158,7 +158,7 @@ You can use `make` to install OpenCV 3.4.2 with the handy `Makefile` included wi
 
 The following commands should do everything to download and install OpenCV 3.4.2 on Linux:
 
-	cd $GOPATH/src/gocv.io/x/gocv
+	cd $GOPATH/src/github.com/LPfan88/gocv
 	make install
 
 If it works correctly, at the end of the entire process, the following message should be displayed:
@@ -176,7 +176,7 @@ If you have already done the "Quick Install" as described above, you do not need
 
 First, you need to change the current directory to the location of the GoCV repo, so you can access the `Makefile`:
 
-	cd $GOPATH/src/gocv.io/x/gocv
+	cd $GOPATH/src/github.com/LPfan88/gocv
 
 Next, you need to update the system, and install any required packages:
 
@@ -206,7 +206,7 @@ To verify your installation you can run one of the included examples.
 
 First, change the current directory to the location of the GoCV repo:
 
-	cd $GOPATH/src/gocv.io/x/gocv
+	cd $GOPATH/src/github.com/LPfan88/gocv
 
 Now you should be able to build or run any of the examples:
 
@@ -227,7 +227,7 @@ After the installation is complete, you can remove the extra files and folders:
 
 If you are running a version of Go older than v1.10 and not modifying GoCV source, precompile the GoCV package to significantly decrease your build times:
 
-	go install gocv.io/x/gocv
+	go install github.com/LPfan88/gocv
 
 ### Custom Environment
 
@@ -256,7 +256,7 @@ We have a special installation for the Raspberry Pi that includes some hardware 
 
 The following commands should do everything to download and install OpenCV 3.4.2 on Raspbian:
 
-	cd $GOPATH/src/gocv.io/x/gocv
+	cd $GOPATH/src/github.com/LPfan88/gocv
 	make install_raspi
 
 If it works correctly, at the end of the entire process, the following message should be displayed:
@@ -284,7 +284,7 @@ To verify your installation you can run one of the included examples.
 
 First, change the current directory to the location of the GoCV repo:
 
-	cd $GOPATH/src/gocv.io/x/gocv
+	cd $GOPATH/src/github.com/LPfan88/gocv
 
 Now you should be able to build or run any of the examples:
 
@@ -299,7 +299,7 @@ The version program should output the following:
 
 If you are running a version of Go older than v1.10 and not modifying GoCV source, precompile the GoCV package to significantly decrease your build times:
 
-	go install gocv.io/x/gocv
+	go install github.com/LPfan88/gocv
 
 ### Custom Environment
 
@@ -369,7 +369,7 @@ That's it, now you are ready to use GoCV.
 
 If you are running a version of Go older than v1.10 and not modifying GoCV source, precompile the GoCV package to significantly decrease your build times:
 
-	go install gocv.io/x/gocv
+	go install github.com/LPfan88/gocv
 
 ### Custom Environment
 

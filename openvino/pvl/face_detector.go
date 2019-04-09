@@ -10,7 +10,7 @@ import (
 	"reflect"
 	"unsafe"
 
-	"gocv.io/x/gocv"
+	"github.com/LPfan88/gocv"
 )
 
 // FaceDetector is a wrapper around the cv::pvl::FaceDetector.

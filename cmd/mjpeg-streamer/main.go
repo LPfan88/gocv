@@ -23,7 +23,7 @@ import (
 	"os"
 
 	"github.com/hybridgroup/mjpeg"
-	"gocv.io/x/gocv"
+	"github.com/LPfan88/gocv"
 )
 
 var (

@@ -26,8 +26,8 @@ import (
 	"os"
 	"strconv"
 
-	"gocv.io/x/gocv"
-	"gocv.io/x/gocv/openvino/pvl"
+	"github.com/LPfan88/gocv"
+	"github.com/LPfan88/gocv/openvino/pvl"
 )
 
 const (
